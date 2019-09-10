@@ -1,3 +1,7 @@
+"""
+    Здесь идет обработка событий для бота.
+    Описание вновь созданных событий должно быть в hand_dict.
+"""
 import requests
 import wikipedia
 import xml.etree.ElementTree as ET
