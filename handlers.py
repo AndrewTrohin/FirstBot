@@ -5,7 +5,20 @@ from telegram.ext import CommandHandler, MessageHandler, Filters
 from telegram.bot import Bot
 from telegram.update import Update
 from telegram import Message
+from telegram.error import TelegramError
 from typing import List, Union
+import logging
+
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.DEBUG,
+    filename='bot.log'
+)
+logger = logging.getLogger(__name__)
+
+
+def error_handler(bot: Bot, update: Update, error: TelegramError) -> None:
+    logger.error('Update "%s" caused error "%s"', update, error)
 
 
 def start(bot: Bot, update: Update) -> Message:
