@@ -1,1 +1,5 @@
 /bot.log
+/venv/
+/.idea/
+/.mypy_cache/
+/__pycache__/
