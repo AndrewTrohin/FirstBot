@@ -1,9 +1,12 @@
-TELEGRAM_BOT_TOKEN = '884190483:AAFcnIlBhidVmCIyQ3mqrH9_5qWNB_qU3UE'
+import os
+
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 
 TELEGRAM_PROXY_CONFIG = {
-    'proxy_url': 'socks5://t3.learn.python.ru:1080',
+    'proxy_url': os.environ.get('TELEGRAM_PROXY_URL'),
     'urllib3_proxy_kwargs': {
-        'username': 'learn',
-        'password': 'python',
+        'username': os.environ.get('TELEGRAM_PROXY_LOGIN'),
+        'password': os.environ.get('TELEGRAM_PROXY_PASSWORD'),
     },
 }
+
