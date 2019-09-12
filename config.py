@@ -9,4 +9,3 @@ TELEGRAM_PROXY_CONFIG = {
         'password': os.environ.get('TELEGRAM_PROXY_PASSWORD'),
     },
 }
-
